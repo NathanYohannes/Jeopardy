@@ -23,6 +23,42 @@ static char categories[NUM_CATEGORIES][MAX_LEN] = {
     "databases"
 };
 
+static char answer_bank[NUM_QUESTIONS][MAX_LEN] = {
+    "variable", 
+    "sequence", 
+    "table",
+    
+    "array",
+    "omega",
+    "null",
+    
+    "pointers",
+    "heap",
+    "query",
+    
+    "isalpha",
+    "kruskal",
+    "union"
+};
+
+static char question_bank[NUM_QUESTIONS][MAX_LEN] = {
+    "This is used to store the values in a program",
+    "This is the order in which tasks are carried out",
+    "This is a collection of related data held within a database",
+    
+    "This is a collection of items stored at contiguous memory locations",
+    "This greek letter denotes the lower-bound performance of a function",
+    "This shows that a value in missing within a table",
+    
+    "These are variables that stores address of another variable",
+    "This is a special Tree-based data structure in which the tree is a complete binary tree",
+    "This is a simple question represented in a way that the DBMS can recognize and process",
+    
+    "This function checks whether a character is an alphabetic letter",
+    "He created the algorithm which finds a minimum spanning forest of an undirected edge-weighted graph",
+    "This can combine the result of 2 or more select statements"
+};
+
 // Questions struct for each question
 typedef struct {
     char category[MAX_LEN];
@@ -50,5 +86,6 @@ extern bool valid_answer(char *category, int value, char *answer);
 
 // Returns true if the question has already been answered
 extern bool already_answered(char *category, int value);
+
 
 #endif /* QUESTIONS_H_ */

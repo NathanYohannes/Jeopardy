@@ -13,16 +13,19 @@
 #define MAX_LEN 256
 
 // Player struct for each player
-typedef struct {
+struct player {
     char name[MAX_LEN];
     int score;
-} player;
+};
+
+// Processes the answer from the user containing what is or who is and tokenizes it to retrieve the answer.
+extern void initialize_players(struct player *players, int NUM_PLAYERS);
 
 // Returns true if the player name matches one of the existing players
-extern bool player_exists(player *players, int num_players, char *name);
+extern bool player_exists(struct player *players, int num_players, char *name);
 
 // Go through the list of players and update the score for the 
 // player given their name
-extern void update_score(player *players, int num_players, char *name, int score);
+extern void update_score(struct player *players, int num_players, char *name, int score);
 
 #endif /* PLAYERS_H_ */
